@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하루 루틴 챌린저 - 대학생용 습관 케어</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="theme-water">
+
+    <div class="app-container" id="app">
+        
+        <nav class="category-tab-container">
+            <button class="tab-btn active" id="tab-water">
+                <i class="fa-solid fa-glass-water"></i>
+                <span>수분 충전</span>
+            </button>
+            <button class="tab-btn" id="tab-brain">
+                <i class="fa-solid fa-brain"></i>
+                <span>뇌 깨우기</span>
+            </button>
+            <button class="tab-btn" id="tab-stretching">
+                <i class="fa-solid fa-person-stretching"></i>
+                <span>1분 스트레칭</span>
+            </button>
+        </nav>
+
+        <header class="app-header">
+            <h1 id="app-title">🥛 수분 충전</h1>
+            <p id="app-subtitle">물 한 모금으로 채우는 건강 생활 습관</p>
+        </header>
+
+        <section class="status-container">
+            <div class="status-box">
+                <span class="status-label">현재 목표 레벨</span>
+                <span class="status-value" id="levelDisplay">🏜️ 메마른 사막</span>
+            </div>
+            <div class="status-box">
+                <span class="status-label">오늘 완수 성공</span>
+                <span class="status-value" id="countDisplay">0회 완료</span>
+            </div>
+        </section>
+
+        <main class="card-body" id="cardBody">
+            <span class="badge" id="missionBadge">웰컴 안내</span>
+            <p class="mission-text" id="missionText">위 탭에서 마음에 드는 카테고리를 고른 후, '새 미션 뽑기'를 눌러 실천해 보세요!</p>
+        </main>
+
+        <div class="btn-group">
+            <button class="action-btn btn-primary" id="nextBtn">
+                <i class="fa-solid fa-circle-chevron-right"></i> 새로운 미션 뽑기
+            </button>
+            <button class="action-btn btn-success" id="completeBtn" disabled>
+                <i class="fa-solid fa-circle-check"></i> 미션 성공 완료!
+            </button>
+        </div>
+
+        <section class="history-container">
+            <div class="history-title">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                <span>오늘의 완수 타임라인 (최근 3개)</span>
+            </div>
+            <ul class="record-list" id="recordList">
+                <li class="empty-record">아직 실천 성공 기록이 없습니다.</li>
+            </ul>
+        </section>
+
+        <footer class="app-footer" id="appFooter">
+            이 앱은 수분 섭취 습관 형성을 위한 생활습관 참고용입니다.
+        </footer>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
